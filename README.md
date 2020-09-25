@@ -9,3 +9,20 @@ npm install
 npm start
 ```
 The server is also available as a Docker image, which can be deployed according to the instructions at the following link: https://git.activageproject.eu/Deployment/DT-AIOTES_docker/src/master/Files_Transfer
+
+## Deployment through docker image
+
+Docker image can be build using the Dockerfile that exist in the root directory of this project.
+
+To deploy the image that exist in Activage Docker Registry, go to [DT-AIOTES_docker/Files_Transfer](https://git.activageproject.eu/Deployment/DT-AIOTES_docker/src/master/Files_Transfer), download the `docker-compose.yml` in a local directory. Modify the environment variables and ports to reflect your configuration. Specifically:
+
+* The ***KEY_CLOACK*** environment variable defines the address (host and port) of a running instance of AIOTES—e.g., https://iti-263.iti.gr:9081/analytics
+
+Then run the following command from the same directory:
+
+```
+docker-compose up -d
+```
+# License
+
+Apache 2.0
